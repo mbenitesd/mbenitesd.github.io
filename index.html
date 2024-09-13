@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Legal - Abogado Laboralista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Consulta Legal con Abogado Laboralista</h1>
+    </header>
+
+    <main>
+        <section class="payment-section">
+            <h2>Realiza tu Consulta</h2>
+            <p>Para hacer una consulta, por favor realiza el pago de $50 USD. Después de completar el pago, podrás enviar tu consulta a través del formulario.</p>
+            <!-- PayPal Button -->
+            <div id="paypal-button-container"></div>
+        </section>
+
+        <section class="form-section">
+            <h2>Formulario de Consulta</h2>
+            <form id="consultation-form" action="submit_form.php" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Detalles de la consulta:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar consulta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Abogado Laboralista. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- PayPal SDK Script -->
+    <script src="https://www.paypal.com/sdk/js?client-id=mbenitesd"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
